@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест</title>
+</head>
+<body>
+    <script>
+        "use strict";
+    document.write("Test<br />");
+    let questions = [
+        "Eu magna ut quis elit adipisicing velit nostrud non nulla pariatur?",
+        "Occaecat esse occaecat laboris proident ipsum?",
+        "Ut dolore consectetur anim excepteur?",
+        "Dolor labore nisi amet eiusmod ut?",
+        "Adipisicing nostrud id sint culpa mollit reprehenderit proident labore qui laborum mollit pariatur?"
+    ];
+
+    let answers = [[],[]];
+
+    for (let j = 0; j < questions.length; j++)
+        {
+            answers[0][j] = questions[j];
+
+            if (confirm(answers[0][j]))
+            answers[1][j] = "Да" 
+            else 
+            answers[1][j] = "Нет"
+        }
+
+    document.write("Q/A <br />");
+
+    for (let j = 0; j < answers[0][j].length; j++)
+    {
+        document.write(j  + 1 + ". " + answers[0][j] + " : " + answers[1][j]); 
+        document.write("<br />");
+    }
+            
+    </script>
+</body>
+</html>

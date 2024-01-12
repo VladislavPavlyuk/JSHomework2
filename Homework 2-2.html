@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>        // 32, 46, 65-90, 97-122
+    let s;
+    let char = [];
+    let j=0; 
+
+    for (let i = 0; i < 256; i++)
+        {
+            if (i == 32) i++
+
+            else if (i == 46) i++
+
+            else if (i == 65) i = 91
+
+            else if (i == 97) i = 123  
+
+            char[j] = String.fromCharCode(i);
+
+            j++;
+        }
+        
+
+    do {
+        let string = prompt("Введите свои ФИО:", "Иван Иванович Иванов")
+
+        for (let i = 0; i < char.length; i++)
+        {
+
+            let pos = string.indexOf(char[i]);
+
+            if (pos != -1) 
+            {
+                alert( "Введенный символ "+ char[i] + " синтаксически некорректен!\nПовторите операцию.");
+                break;                
+            } 
+            
+        }        
+    } while (true);
+
+    </script>
+
+</body>
+</html>
+

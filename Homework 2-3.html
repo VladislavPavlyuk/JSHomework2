@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let string = prompt("Введите адрес : " , "http://www.ufa.com.ua/utilites/hdd/out.php?sort=2")
+        let protocol = "";
+        let host = "";
+        let path = "";
+        let filename = "";
+        let search = ""; 
+
+        protocol = string.slice(0, string.indexOf("//")) 
+
+        let A = string.split("/");
+        host = A[2];
+        
+        firstPos = string.indexOf("/") + 2
+        secondPos = string.indexOf("/", firstPos)
+        path = string.slice(secondPos, string.lastIndexOf("/")+1)
+
+        filename = string.slice(string.lastIndexOf("/")+1, string.indexOf("?"))
+
+        search = string.slice(string.indexOf("?")+1, string.length)
+        
+        alert("protocol : "     + protocol +
+                "\nhost : "     + host +
+                "\npath : "     + path +
+                "\nfilename : " + filename +
+                "\nsearch : "   + search);
+
+    </script>
+</body>
+</html>

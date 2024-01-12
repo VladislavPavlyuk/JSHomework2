@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin:auto;
+        }
+        td{
+            border:solid black  ;
+            width: 5rem;
+            height: 5rem;
+        }
+        .brown{
+            background: brown; 
+        }
+        .yellow{
+            background: yellow
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <script>
+        let flag = true; 
+        document.write("<table >");
+        document.write("<tbody>");
+            for (j = 0; j < 8; j++){ 
+            document.write("<tr>");
+                for (i = 0; i < 8; i++)
+                { 
+                    if (flag)
+                        {
+                            document.write("<td class='brown'; ");
+                            document.write("</td>");
+                        } else
+                        {
+                            document.write("<td class='yellow';>");
+                            document.write("</td>");
+                        }
+                    flag = !flag;  
+                }
+            document.write("</tr>"); 
+            if (!flag) flag = !flag; 
+                else flag = !flag; 
+            }               
+        document.write("</tbody>");
+        document.write("</table> ");
+    </script>
+
+</body>
+
+</body>
+</html>
